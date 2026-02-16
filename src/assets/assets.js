@@ -165,7 +165,7 @@ export const ownerMenuLinks = [
 
 export const dummyUserData = {
   "_id": "6847f7cab3d8daecdb517095",
-  "name": "GreatStack",
+  "name": "Aayush",
   "email": "admin@example.com",
   "role": "owner",
   "image": user_profile,
@@ -452,7 +452,7 @@ export const CustomerData = [
 export const dummyMyBookingsData = [
     {
         "_id": "68482bcc98eb9722b7751f70",
-        "bike": dummyBikeData[0], // Updated key from 'car' to 'bike'
+        "bike": dummyBikeData[0], 
         "user": "6847f7cab3d8daecdb517095",
         "owner": "6847f7cab3d8daecdb517095",
         "pickupDate": "2025-06-13T00:00:00.000Z",
@@ -498,7 +498,7 @@ export const dummyMyBookingsData = [
 
 
 export const dummyDashboardData = {
-    "totalBikes": 10, // Updated key
+    "totalBikes": 10, 
     "totalBookings": 2,
     "pendingBookings": 0,
     "completedBookings": 2,

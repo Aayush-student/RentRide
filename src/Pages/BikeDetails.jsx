@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { assets, dummyBikeData } from "../assets/assets";
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer";
+import { toast } from "react-toastify";
 
 const BikeDetails = ({ bookingData, setBookingData }) => {
   const [bike, setBike] = useState(null);
@@ -34,7 +35,12 @@ const BikeDetails = ({ bookingData, setBookingData }) => {
 
     setBookingData((prev) => [...prev, newBooking]);
     
-    alert(`${bike.brand} ${bike.model} reserved successfully!`);
+    toast.success("Ride Reserved Successfully 🚀", {
+    icon: "🚀",
+    className:
+    "!bg-gradient-to-r !from-green-500 !to-emerald-600 !text-white !shadow-xl !rounded-2xl"
+    });
+
     navigate("/my-bookings"); 
   };
 
@@ -134,6 +140,7 @@ const BikeDetails = ({ bookingData, setBookingData }) => {
               <button 
                 type="submit" 
                 className="w-full bg-gradient-to-r from-gray-900 to-blue-900 hover:from-black hover:to-blue-950 text-white py-5 rounded-3xl font-bold uppercase tracking-widest transition-all shadow-lg shadow-blue-900/20 active:scale-95 mt-4"
+                
               >
                 Book Now
               </button>

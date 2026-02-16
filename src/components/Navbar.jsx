@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { assets, menuLinks } from '../assets/assets'
+import LoginForm from './Loginform'
 
-const Navbar = () => {
+const Navbar = ({islogin,setIsLogin}) => {
     const [listbikes, setListBikes] = useState(true)
     const location = useLocation()
     const navigate = useNavigate()
     const [open, setOpen] = useState(false)
+
 
     return (
         <nav className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 md:px-12 py-2 z-50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5 font-['Outfit']">
@@ -57,12 +59,32 @@ const Navbar = () => {
                         >
                             {listbikes ? "List your bike" : "Dashboard"}
                         </button>
-                        
-                        <Link to="/loginform">
-                            <button className="cursor-pointer px-8 py-2.5 bg-gradient-to-r from-gray-900 to-blue-900 hover:from-black hover:to-blue-950 text-white rounded-lg text-[15px] font-medium tracking-wide shadow-lg shadow-blue-900/10 hover:shadow-blue-900/20 hover:-translate-y-0.5 transition-all duration-300 active:scale-95">
-                                Login
-                            </button>
+                       
+
+                        <Link to='/owner'>
+                        <button className='className="hidden md:block cursor-pointer text-[15px] font-medium tracking-tight text-gray-600 hover:text-blue-950 transition-colors"'>Dashboard</button>
                         </Link>
+                        
+                       
+                        
+                        <div>
+                            {!islogin ? <button className="cursor-pointer px-8 py-2.5 bg-gradient-to-r from-gray-900 to-blue-900 hover:from-black hover:to-blue-950 text-white rounded-lg text-[15px] font-medium tracking-wide shadow-lg shadow-blue-900/10 hover:shadow-blue-900/20 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+                            onClick={()=> setIsLogin(true)}>
+                                Login/Signup
+                            </button>
+                            :
+                             <button className="cursor-pointer px-8 py-2.5 bg-gradient-to-r from-gray-900 to-blue-900 hover:from-black hover:to-blue-950 text-white rounded-lg text-[15px] font-medium tracking-wide shadow-lg shadow-blue-900/10 hover:shadow-blue-900/20 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+                            onClick={()=> setIsLogin(false)}>
+                                LogOut
+                            </button>
+                            }
+                        </div>
+
+                       
+                        
+                            
+                           
+                           
                     </div>
                 </div>
 
