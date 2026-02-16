@@ -1,12 +1,20 @@
-# React + Vite
+# 🏍️ RentRide - Affordable Bike Rental Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RentRide is a modern web application designed to make urban mobility accessible and budget-friendly. It connects travelers with bike owners, offering a seamless way to rent two-wheelers without the high costs of traditional agencies.
 
-Currently, two official plugins are available:
+Built with the **MERN Stack** (MongoDB, Express, React, Node.js) and styled with **Tailwind CSS**, RentRide focuses on utility, speed, and ease of use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+* **Budget-Friendly Fleet:** Browse a wide range of economical bikes and scooters, from high-mileage commuters to comfortable cruisers.
+* **Transparent Pricing:** Real-time cost calculation with zero hidden fees.
+* **Smart Booking:** Easy date selection and instant reservation status.
+* **Dual Dashboards:** * **User:** Track rides and manage expenses.
+    * **Owner:** List idle bikes to earn passive income.
+* **Responsive Design:** Optimized for mobile users on the go.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **Frontend:** React.js, React Router DOM, Tailwind CSS
+* **Backend:** Node.js, Express.js (In progress)
+* **Database:** MongoDB
