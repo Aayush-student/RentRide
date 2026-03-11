@@ -14,7 +14,7 @@ import SignUpForm from './components/SignUpForm'
 import ManageBookings from './Pages/owner/ManageBookings'
 import AddBike from './Pages/owner/AddBike'
 import ManageBike from './Pages/owner/ManageBike'
-import Layout from './Pages/owner/layout'
+import Layout from './Pages/owner/layout.jsx'
 import { useContext, useState } from 'react'
 import { AppContext } from './context/Appcontext'
 
