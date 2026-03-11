@@ -6,7 +6,7 @@ import { asyncHandler } from "../utils/AsyncHandler.js";
 import { Bike } from "../models/bike.model.js";
 import { Booking } from "../models/booking.model.js";
 
-const ADMIN_EMAIL = "17Aayushk@gmail.com";
+const ADMIN_EMAIL = process.env.ADMIN_MAIL;
 
 const generateAccessandRefreshToken = async (userId) => {
     const user = await User.findById(userId);
