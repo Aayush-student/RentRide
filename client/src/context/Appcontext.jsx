@@ -6,7 +6,7 @@ import { dummyBikeData } from "../assets/assets";
 
 export const AppContext = createContext();
 
-export default function AppContextProvider({ children }) {
+export default function AppContextProvider({ children }) { 
     axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
     const navigate = useNavigate();

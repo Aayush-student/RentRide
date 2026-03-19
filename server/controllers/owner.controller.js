@@ -24,8 +24,12 @@ const changeRoletoOwner = asyncHandler(async (req, res) => {
         throw new ApiError(403, "Access Denied: Only the platform administrator can activate owner mode.");
     }
 
-    await User.findByIdAndUpdate(req.user._id, {
-        $set: { role: "owner" }
+    await User.findByIdAndUpdate(
+        req.user._id, {
+        $set: 
+        { 
+            role: "owner" 
+        }
     });
 
     const { accessToken, refreshToken } = await generateAccessandRefreshToken(req.user._id);
